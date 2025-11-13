@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 15, React 19, and Tailwind CSS 4, featuring smooth scroll animations powered by GSAP and Lenis.
 
-First, run the development server:
+## 🚀 Features
+
+- ⚡️ Next.js 15 with Turbopack for blazing fast development
+- ⚛️ React 19 with latest features
+- 🎨 Tailwind CSS 4 for styling
+- 🎬 GSAP for advanced animations
+- 📜 Lenis for smooth scroll experience
+- 🔒 TypeScript for type safety
+- 🐳 Docker support for easy deployment
+- 📱 Fully responsive design
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15.5.4
+- **React:** 19.1.0
+- **Styling:** Tailwind CSS 4
+- **Animations:** GSAP 3.13.0
+- **Smooth Scroll:** Lenis 1.3.11
+- **Language:** TypeScript 5
+- **Container:** Docker
+
+## 📋 Prerequisites
+
+- Node.js 20.x or higher
+- npm or yarn
+- Docker (optional, for containerized deployment)
+
+## 🚀 Getting Started
+
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🐳 Docker Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Quick Start with Docker
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Production:**
+```bash
+docker-compose up -d
+```
 
-## Learn More
+**Development:**
+```bash
+docker-compose --profile dev up portfolio-dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+For detailed Docker documentation, see [DOCKER.md](./DOCKER.md)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚢 Deployment Options
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Vercel (Recommended)
+```bash
+npm install -g vercel
+vercel --prod
+```
 
-## Deploy on Vercel
+### VPS/Server with PM2
+```bash
+npm install -g pm2
+npm run build
+pm2 start npm --name "portfolio" -- start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+portfolio/
+├── app/                    # Next.js app directory
+├── public/                 # Static assets
+├── Dockerfile             # Docker configuration
+├── docker-compose.yml     # Docker Compose setup
+├── next.config.ts         # Next.js configuration
+├── tailwind.config.ts     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── package.json           # Dependencies and scripts
+```
+
+## 📝 Scripts
+
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm start` - Start production server
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory for environment-specific variables:
+
+```env
+# Example
+NEXT_PUBLIC_API_URL=your_api_url
+```
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📄 License
+
+This project is private and proprietary.
+
+## 👤 Author
+
+Your Name
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- GSAP for powerful animation library
+- Lenis for smooth scroll implementation
