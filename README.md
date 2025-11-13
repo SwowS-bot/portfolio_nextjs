@@ -131,7 +131,7 @@ This project is private and proprietary.
 
 ## 👤 Author
 
-Your Name
+SwowS_bot
 
 ## 🙏 Acknowledgments
 
